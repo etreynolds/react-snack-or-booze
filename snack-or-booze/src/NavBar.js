@@ -25,7 +25,7 @@ function NavBar() {
 
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink to="/new">New Menu Item</NavLink>
+            <NavLink to="/new">Add Item</NavLink>
           </NavItem>
         </Nav>
       </Navbar>
