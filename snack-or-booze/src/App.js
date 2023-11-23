@@ -56,7 +56,7 @@ function App() {
               <Item items={drinks} cantFind="/drinks" />
             </Route>
             <Route exact path="/new">
-              <NewItemForm addItem={SnackOrBoozeApi.addItem}/>
+              <NewItemForm addItem={SnackOrBoozeApi.addItem} />
             </Route>
             <Route><NotFound /></Route>
           </Switch>

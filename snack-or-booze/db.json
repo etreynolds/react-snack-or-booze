@@ -27,14 +27,6 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
-    },
-    {
-      "id": "37-4ldS",
-      "name": "Perk",
-      "description": "Boost of energy in the morning!",
-      "recipe": "1 scoop perk, 1 cup hot water",
-      "serve": "In a mug with some whipped cream on top.",
-      "type": "drinks"
     }
   ],
   "snacks": [
@@ -58,22 +50,6 @@
       "description": "Tart and delicious.",
       "recipe": "Mix arugula, toasted walnuts, and thinly-sliced Parmesan cheese. Dress with lemon and olive oil.",
       "serve": "Place on tiny, precious little plates."
-    },
-    {
-      "id": "UbOl6Kv",
-      "name": "Orange",
-      "description": "Fruit!",
-      "recipe": "Eat",
-      "serve": "On a plate",
-      "type": "snacks"
-    },
-    {
-      "id": "bYtxy32",
-      "name": "test",
-      "description": "test",
-      "recipe": "test",
-      "serve": "test",
-      "type": "snacks"
     }
   ]
 }

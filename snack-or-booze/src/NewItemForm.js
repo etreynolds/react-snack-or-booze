@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import './NewItemForm.css';
+
 
 function NewItemForm({ addItem }) {
   const INITIAL_STATE = {
@@ -11,7 +13,7 @@ function NewItemForm({ addItem }) {
     type: 'snacks'
   }
   const [formData, setFormData] = useState(INITIAL_STATE);
-  const history = useHistory;
+  const history = useHistory();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,15 +22,17 @@ function NewItemForm({ addItem }) {
       [name]: value
     }))
   }
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
     addItem({ ...formData });
     setFormData(INITIAL_STATE);
     history.push("/");
   }
 
   return (
-    <div>
+    <div className="form-box">
       <h1 style={{ color: "black" }}>New Item Form</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="type" style={{ color: "black" }}>Type</label>
@@ -41,7 +45,7 @@ function NewItemForm({ addItem }) {
           onChange={handleChange}>
           <option value="snacks">Snacks</option>
           <option value="drinks">Drinks</option>
-        </select>
+        </select><br />
         <label htmlFor="name" style={{ color: "black" }}>Name</label>
         <input
           id="name"
@@ -49,15 +53,16 @@ function NewItemForm({ addItem }) {
           name="name"
           value={formData.name}
           onChange={handleChange}
-        />
-        {/* <label htmlFor="id" style={{color: "black"}}>ID</label>
+        /><br />
+        <label htmlFor="id" style={{ color: "black" }}>ID</label>
         <input
           id="id"
+          placeholder="url address id"
           type="text"
           name="id"
           value={formData.id}
           onChange={handleChange}
-        /> */}
+        /><br />
         <label htmlFor="description" style={{ color: "black" }}>Description</label>
         <input
           id="description"
@@ -65,7 +70,7 @@ function NewItemForm({ addItem }) {
           name="description"
           value={formData.description}
           onChange={handleChange}
-        />
+        /><br />
         <label htmlFor="recipe" style={{ color: "black" }}>Recipe</label>
         <input
           id="recipe"
@@ -73,16 +78,16 @@ function NewItemForm({ addItem }) {
           name="recipe"
           value={formData.recipe}
           onChange={handleChange}
-        />
+        /><br />
         <label htmlFor="serve" style={{ color: "black" }}>Serve</label>
         <input
           id="serve"
           type="text"
           name="serve"
-          placeholder="How should item be served?"
+          placeholder="How to serve"
           value={formData.serve}
           onChange={handleChange}
-        />
+        /><br />
         <button>Add Item</button>
       </form>
     </div>
